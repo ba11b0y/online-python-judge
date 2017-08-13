@@ -18,12 +18,12 @@ function outf(text) {
     var expected_output= "[1, 4, 9, 16, 25, 36]";
     //console.log(typeof(text),text);
     if(text==expected_output){
-    	myoutput.innerHTML="Test case passed";
+    	myoutput.innerHTML='<h3 style="color:green;text-align:center;">Test case passed</h3>';
     	console.log("Passed");
     }
     else if(text!=expected_output && text.length!=1){
     	console.log("Wrong");
-    	myoutput.innerHTML = "Wrong output " + text; 
+    	myoutput.innerHTML = '<h3 style="color:red;text-align:center;">Wrong output'+ text+'</h3>'; 
     }
 
 } 
@@ -48,7 +48,7 @@ function runit() {
        return Sk.importMainWithBody("<stdin>", false, prog, true);
    });
    myPromise.then(function(mod) {
-       //console.log('success');
+       console.log('success');
    },
        function(err) {
        console.log(err.toString());
